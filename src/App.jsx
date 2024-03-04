@@ -1,14 +1,14 @@
-import './App.css';
-import SideNavBar from './components/SideNav/SideNav';
+import "./App.css";
+import SideNavBar from "./components/SideNav/SideNav";
 
-import TopNavBar from "./components/TopNav/TopNav"
+import TopNavBar from "./components/TopNav/TopNav";
 function App() {
   return (
     <>
-  <TopNavBar></TopNavBar>
-  <SideNavBar></SideNavBar>
+      <SideNavBar></SideNavBar>
+      <TopNavBar></TopNavBar>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
