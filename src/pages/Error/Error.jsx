@@ -1,17 +1,21 @@
-import Sidebar from "../../components/SideNav/SideNav"
-import '../Error/Error.css'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import TopNavBar from "../../components/TopNav/TopNav";
+import "../Error/Error.css";
 
-const Error = () => {
+//Créer la page error en cas d'erreurs et utiliser pour les 3 pages
+export default function ErrorPage() {
   return (
-    <main className='main-error'>
-      <Sidebar />
-      <div className='main-error__error404'>
-          <h1 className='main-error__error404__title'> Erreur 404</h1>
-          <h2 className='main-error__error404__subtitle'>Oups! La page que vous demandez n'existe pas.</h2>
-          <Link to='/' className='main-error__error404__link'>Retourner sur la page d'accueil</Link>
+    <div className="error-page">
+      <TopNavBar />
+      <div className="container">
+        <h1 className="title-error">404</h1>
+        <div className="oups">
+          Oups! La page que vous demandez n'existe pas.
+        </div>
+        <Link className="link-accueil" to="/">
+          retourner sur la page d'accueil
+        </Link>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
-export default Error

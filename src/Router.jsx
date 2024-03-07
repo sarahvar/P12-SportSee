@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import Error from '../../pages/Error/Error'
+import Error from '../src/pages/Error/Error.jsx'
 
 
 const Router = () => {
