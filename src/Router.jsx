@@ -1,13 +1,16 @@
-import { Routes, Route } from 'react-router-dom'
-import Error from '../src/pages/Error/Error.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorPage from '../src/pages/Error/Error.jsx';
+import App from './App.jsx';
 
-
-const Router = () => {
+const AppRouter = () => {
   return (
-    <Routes>
-      <Route path='*' element={<Error />} />
-    </Routes>
-  )
+    <Router>
+      <Routes>
+        <Route path='*' element={<ErrorPage />} />
+        <Route path="/" element={<App />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default Router;
+export default AppRouter;
