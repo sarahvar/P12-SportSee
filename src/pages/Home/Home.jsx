@@ -1,8 +1,10 @@
 
-export default function HomePage() {
+
+const HomePage =() => {
     return (
-      <div className="error-page">
+      <div>
         <h1>Hello</h1>
       </div>
     );
   }
+  export default HomePage
