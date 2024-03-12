@@ -41,6 +41,9 @@
     text-decoration: none;
   }
   
+  .topbar_right a:hover {
+    color: #ff0101;
+  }
   .topbar_right ul li a.active {
     color: #ff0101; 
   }
