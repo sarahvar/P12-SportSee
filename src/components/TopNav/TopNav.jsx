@@ -6,7 +6,7 @@ import "../TopNav/TopNav.css"
 const headerNavLinks = [
   { route: "/", name: "Accueil" },
   { route: "/profil", name: "Profil" },
-  { route: "/reglage", name: "Réglage" },
+  { route: "/reglages", name: "Réglages" },
   { route: "/communaute", name: "Communauté" },
 ];
 
@@ -16,6 +16,7 @@ export default function TopNavBar() {
       <img src={logo} alt="logo"></img>
     </div>
     <div className="topbar_right">
+    
         <ul>
           {headerNavLinks.map((link, index) => (
             <li key={index}>

@@ -5,13 +5,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #ff6060;
+    color: #ff0101;
     margin: 30px;
   }
   
   .title-error {
     margin-top: 45px;
-    font-size: 288px;
     text-align: center;
   }
   

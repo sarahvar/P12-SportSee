@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profil" element={<HomePage/>} />
-        <Route path="/reglage" element={<HomePage/>} />
+        <Route path="/reglages" element={<HomePage/>} />
         <Route path="/communaute" element={<HomePage/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
