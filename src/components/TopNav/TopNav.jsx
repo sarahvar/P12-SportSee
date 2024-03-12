@@ -1,6 +1,6 @@
 
 import logo from "../../../public/logo.png";
-import {BrowserRouter, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import "../TopNav/TopNav.css"
 
 const headerNavLinks = [
@@ -16,7 +16,6 @@ export default function TopNavBar() {
       <img src={logo} alt="logo"></img>
     </div>
     <div className="topbar_right">
-      <BrowserRouter>
         <ul>
           {headerNavLinks.map((link, index) => (
             <li key={index}>
@@ -24,7 +23,6 @@ export default function TopNavBar() {
             </li>
           ))}
         </ul>
-      </BrowserRouter>
     </div>
   </div>
 );
