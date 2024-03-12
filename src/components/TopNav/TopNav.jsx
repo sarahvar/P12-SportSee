@@ -10,21 +10,24 @@ const headerNavLinks = [
   { route: "/communaute", name: "Communauté" },
 ];
 
+import { NavLink } from 'react-router-dom';
+
 export default function TopNavBar() {
-  return ( <div id="navbar">
-    <div className="navbar_logo">
-      <img src={logo} alt="logo"></img>
-    </div>
-    <div className="topbar_right">
-    
+  return (
+    <div id="navbar">
+      <div className="navbar_logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="topbar_right">
         <ul>
           {headerNavLinks.map((link, index) => (
             <li key={index}>
-              <Link to={link.route}>{link.name}</Link>
+              <NavLink to={link.route} activeClassName="active">{link.name}</NavLink>
             </li>
           ))}
         </ul>
+      </div>
     </div>
-  </div>
-);
+  );
 }
+
