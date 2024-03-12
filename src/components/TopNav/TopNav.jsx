@@ -1,6 +1,6 @@
 
 import logo from "../../../public/logo.png";
-import {Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../TopNav/TopNav.css"
 
 const headerNavLinks = [
@@ -9,8 +9,6 @@ const headerNavLinks = [
   { route: "/reglages", name: "Réglages" },
   { route: "/communaute", name: "Communauté" },
 ];
-
-import { NavLink } from 'react-router-dom';
 
 export default function TopNavBar() {
   return (
