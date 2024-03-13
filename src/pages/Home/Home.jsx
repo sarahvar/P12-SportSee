@@ -1,10 +1,8 @@
-
+import Activity from "../../components/Dashboard/ActivityCharts/Activity"
 
 const HomePage =() => {
     return (
-      <div>
-        <h1>Hello</h1>
-      </div>
+<Activity/>
     );
   }
   export default HomePage
