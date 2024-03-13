@@ -4,6 +4,7 @@ import SideNavBar from "./components/SideNav/SideNav";
 import TopNavBar from "./components/TopNav/TopNav";
 import ErrorPage from "./pages/Error/Error";
 import HomePage from "./pages/Home/Home";
+import UnderMaintenance from "./pages/UnderMaintenance/UnderMaintenance";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profil" element={<HomePage/>} />
-        <Route path="/reglages" element={<HomePage/>} />
-        <Route path="/communaute" element={<HomePage/>} />
+        <Route path="/reglages" element={<UnderMaintenance/>} />
+        <Route path="/communaute" element={<UnderMaintenance/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <SideNavBar />

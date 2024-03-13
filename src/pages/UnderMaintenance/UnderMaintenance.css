@@ -1,0 +1,22 @@
+#under-maintenance {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#under-maintenance h1 {
+    color:#ff0101;
+}
+
+#under-maintenance img {
+    width: 20%;
+}
+
+#under-maintenance a {
+    text-decoration: none;
+    color: #ff0101;
+    font-size: large;
+    margin-top: 3em;
+}
