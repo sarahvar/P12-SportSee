@@ -1,0 +1,29 @@
+.legend {
+    margin-bottom: 73px;
+}
+
+.legend__barChart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legend__barChart__title {
+    color: #20253A;
+    font-size: 0.94rem;
+    margin-bottom: 3.8rem;
+}
+
+.legend__barChart__icons {
+    display: flex;
+}
+
+.legend__barChart__icons__bullet > img {
+    padding-left: 32px; 
+}
+
+.legend__barChart__icons__bullet__text {
+    color: #74798C;
+    padding-left: 12px; 
+    font-size: 0.875rem;
+}
