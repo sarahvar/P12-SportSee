@@ -1,13 +1,13 @@
 export class Session {
-    constructor(session) {
-        this.session = session;
+    constructor(sessions) {
+        this.sessions = sessions;
     }
 
     format() {
-        if(!this.session) {
+        if(!this.sessions) {
             return []
         }
-        return this.session.map((el, index) => {
+        return this.sessions.map((el, index) => {
             return {
               day: index + 1,
               kilogram: el.kilogram,

@@ -7,7 +7,7 @@ import iconCaloriesBrulees from '../../../assets/Activity-icons/Oval-Calories-br
 import { useState, useEffect } from 'react';
 import { getUserActivity } from '../../../api/call';
 import { USER_ACTIVITY } from '../../../mocks/data/activity';
-import { getData } from '../../../service/dataSwitch'; // Import de la fonction getData
+import { getData } from '../../../service/dataSwitch'; // Importez getData depuis votre service
 
 const Activity = () => {
     const { id } = useParams();
