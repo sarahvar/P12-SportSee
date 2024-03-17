@@ -4,19 +4,19 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { ToolType } from '../../Dashboard/ActivityCharts/ToolType';
 import iconWeight from "../../../assets/Activity-icons/Oval-Poids.svg";
 import iconCaloriesBrulees from '../../../assets/Activity-icons/Oval-Calories-brulees.svg';
-import { getData } from '../../../service/dataSwitch';
 import { useState, useEffect } from 'react';
 import { getUserActivity } from '../../../api/call';
 import { USER_ACTIVITY } from '../../../mocks/data/activity';
+import { getData } from '../../../service/dataSwitch'; // Import de la fonction getData
 
 const Activity = () => {
     const { id } = useParams();
-    const [userData, setUserData] = useState(null); // Définir userData avec null par défaut
+    const [userData, setUserData] = useState([]); // Définir userData avec un tableau vide par défaut
   
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const dataChoice = getData();
+                const dataChoice = getData(); // Utilisation de getData pour déterminer la source des données
         
                 if (dataChoice === 'mocked') {    
                     const data = USER_ACTIVITY.find((user) => user.userId == id);
@@ -43,10 +43,6 @@ const Activity = () => {
         fetchData();
     }, [id]);
     
-    if (userData === null || userData.length === 0) {
-        return <div>Aucune donnée utilisateur trouvée</div>;
-    }
-  
     return (
         <div className='legend'>
             <div className='legend__barChart'>

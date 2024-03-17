@@ -20,7 +20,7 @@ export default function TopNavBar() {
         <ul>
           {headerNavLinks.map((link, index) => (
             <li key={index}>
-              <NavLink to={link.route} activeClassName="active">{link.name}</NavLink>
+              <NavLink to={link.route} activeclassname="active">{link.name}</NavLink>
             </li>
           ))}
         </ul>
@@ -28,4 +28,5 @@ export default function TopNavBar() {
     </div>
   );
 }
+
 
