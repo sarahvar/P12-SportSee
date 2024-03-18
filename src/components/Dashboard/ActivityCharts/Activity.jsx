@@ -7,22 +7,22 @@ import iconCaloriesBrulees from '../../../assets/Activity-icons/Oval-Calories-br
 import { useState, useEffect } from 'react';
 import { getUserActivity } from '../../../api/call';
 import { USER_ACTIVITY } from '../../../mocks/data/activity';
-import { getData } from '../../../service/dataSwitch'; // Importez getData depuis votre service
+import { getData } from '../../../service/dataSwitch';
 
 const Activity = () => {
     const { id } = useParams();
-    const [userData, setUserData] = useState([]); // Définir userData avec un tableau vide par défaut
+    const [userData, setUserData] = useState([]); 
   
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const dataChoice = getData(); // Utilisation de getData pour déterminer la source des données
+                const dataChoice = getData();
         
                 if (dataChoice === 'mocked') {    
                     const data = USER_ACTIVITY.find((user) => user.userId == id);
               
                     if (data) {
-                        console.log("Données utilisateur:", data); // Afficher les données reçues
+                        console.log("Données utilisateur (maquette) :", data);
                         let dataSessions = data.sessions.map((el, index) => ({
                             day: index + 1,
                             kilogram: el.kilogram,
@@ -33,7 +33,7 @@ const Activity = () => {
             
                 } else if (dataChoice === 'api') { 
                     const data = await getUserActivity(id);
-                    console.log("Données utilisateur:", data); // Afficher les données reçues
+                    console.log("Données utilisateur (API) :", data);
                     setUserData(data);
                 }
             } catch (error) {
