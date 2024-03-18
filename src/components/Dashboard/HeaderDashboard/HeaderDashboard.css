@@ -1,0 +1,22 @@
+.headerDashboard {
+    margin-bottom: 77px;
+}
+
+.headerDashboard__title {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.headerDashboard__name {
+    color: #FF0101;
+}
+
+.headerDashboard__felicitation {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #000;
+}
