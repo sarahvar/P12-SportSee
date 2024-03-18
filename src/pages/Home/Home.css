@@ -1,0 +1,36 @@
+.home {
+    display: flex;
+}
+
+.home__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.home__user__title {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #000;
+    color: #ff0202;
+    margin-bottom: 1rem;
+}
+
+.home__user__linkUser {
+    padding: 10px 50px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #ff0202;
+    width: 240px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+.home__user__linkUser:hover {
+    color: #000;
+}

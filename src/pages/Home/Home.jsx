@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import './Home.css';
 const HomePage = () => {
     return (
         <main className='home'>
