@@ -1,10 +1,10 @@
-export const USER_INFOS = [
+export const USER_MAIN_DATA = [
     {
         id: 12,
         userInfos: {
             firstName: 'Karl',
             lastName: 'Dovineau',
-            age: 31
+            age: 31,
         },
         todayScore: 0.12,
         keyData: {
