@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { USER_MAIN_DATA } from './../../../mocks/data/informations'; // Assurez-vous de fournir le bon chemin
+import { USER_MAIN_DATA } from '../../../mocks/data/informations'; // Assurez-vous de fournir le bon chemin
 
 const HeaderDashboard = () => {
   // Utilisez useParams pour obtenir les paramètres de l'URL, y compris userId
