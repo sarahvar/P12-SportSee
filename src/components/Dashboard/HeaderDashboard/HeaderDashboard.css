@@ -9,11 +9,11 @@
     margin-bottom: 2rem;
 }
 
-.headerDashboard__name {
+.headerDashboard__firstname {
     color: #FF0101;
 }
 
-.headerDashboard__felicitation {
+.headerDashboard__felicitations {
     font-family: Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
