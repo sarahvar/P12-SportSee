@@ -6,8 +6,8 @@ const HeaderDashboard = () => {
   const { userId } = useParams();
 
   // Utilisez userId pour récupérer les informations de l'utilisateur à partir de USER_MAIN_DATA
-  const user = USER_MAIN_DATA.find(user => user.id === parseInt(userId));
-
+  const user = USER_MAIN_DATA.find(user => user.id == userId);
+  console.log("Données utilisateur (users) :", user);
   // Si aucun utilisateur correspondant n'est trouvé, affichez un message d'erreur
   if (!user) {
     return <div>Utilisateur non trouvé</div>;

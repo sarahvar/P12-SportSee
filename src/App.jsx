@@ -16,7 +16,7 @@ function App() {
         <Route path="/profil" element={<HomePage/>} />
         <Route path="/reglages" element={<UnderMaintenance/>} />
         <Route path="/communaute" element={<UnderMaintenance/>} />
-        <Route path="/user/:id" element={<User/>} />
+        <Route path="/user/:userId" element={<User/>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <SideNavBar />

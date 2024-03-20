@@ -10,7 +10,7 @@ import { USER_ACTIVITY } from '../../../mocks/data/activity';
 import { getData } from '../../../service/dataSwitch';
 
 const Activity = () => {
-    const { id } = useParams();
+    const { userId } = useParams();
     const [userData, setUserData] = useState([]); 
   
     useEffect(() => {
@@ -19,7 +19,7 @@ const Activity = () => {
                 const dataChoice = getData();
         
                 if (dataChoice === 'mocked') {    
-                    const data = USER_ACTIVITY.find((user) => user.userId == id);
+                    const data = USER_ACTIVITY.find((user) => user.userId == userId);
               
                     if (data) {
                         console.log("Données utilisateur (maquette) :", data);
@@ -32,7 +32,7 @@ const Activity = () => {
                     }
             
                 } else if (dataChoice === 'api') { 
-                    const data = await getUserActivity(id);
+                    const data = await getUserActivity(userId);
                     console.log("Données utilisateur (API) :", data);
                     setUserData(data);
                 }
@@ -41,7 +41,7 @@ const Activity = () => {
             }
         };
         fetchData();
-    }, [id]);
+    }, [userId]);
     
     return (
         <div className='legend'>

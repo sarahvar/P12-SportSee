@@ -1,4 +1,4 @@
-import React from 'react';
+
 import HeaderDashboard from "../../components/Dashboard/HeaderDashboard/HeaderDashboard";
 import Activity from "../../components/Dashboard/ActivityCharts/Activity";
 
