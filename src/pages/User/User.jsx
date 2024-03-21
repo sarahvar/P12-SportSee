@@ -1,6 +1,7 @@
 
 import HeaderDashboard from "../../components/Dashboard/HeaderDashboard/HeaderDashboard";
 import Activity from "../../components/Dashboard/ActivityCharts/Activity";
+import Objectifs from "../../components/Dashboard/Objectifs/Objectifs";
 
 
 const User = () => {
@@ -8,6 +9,7 @@ const User = () => {
     <div>
       <HeaderDashboard />
       <Activity />
+      <Objectifs/>
     </div>
   );
 }
