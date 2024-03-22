@@ -1,0 +1,12 @@
+.container-radar {
+    width: 16rem;
+    height: 263px;
+    border-radius: 5px;
+    background: #282D30;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.custom-axis {
+    text-align: right;
+    font-size: 12px;
+}
