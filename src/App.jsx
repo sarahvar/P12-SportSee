@@ -16,7 +16,14 @@ function App() {
         <Route path="/profil" element={<HomePage/>} />
         <Route path="/reglages" element={<UnderMaintenance/>} />
         <Route path="/communaute" element={<UnderMaintenance/>} />
-        <Route path="/user/:userId" element={<User/>} />
+        <Route
+          path="/user/:userId"
+          element={
+            <div style={{ marginRight: "20rem" }}>
+              <User />
+            </div>
+          }
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <SideNavBar />
@@ -25,3 +32,4 @@ function App() {
 }
 
 export default App;
+
