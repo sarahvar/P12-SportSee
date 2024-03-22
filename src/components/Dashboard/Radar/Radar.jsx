@@ -1,6 +1,6 @@
 
 import './Radar.css'
-import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from 'recharts';
+import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer, } from 'recharts';
 import { USER_PERFORMANCE} from '../../../mocks/data/performance'
 import { getUserPerformance } from '../../../api/call'
 import { useParams } from 'react-router-dom';
@@ -41,7 +41,7 @@ const RadarPerformance = () => {
   return (
     <div className="container-radar">
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart outerRadius={80} data={radarData}>
+      <RadarChart outerRadius={70} data={radarData}>
         <PolarGrid gridType='polygon' radialLines={false} />
         <PolarAngleAxis className='custom-axis' dataKey="kind"  tick={{ fill: "white", fontSize: 12 }} />
         <Radar dataKey="value" stroke="#000" fill="rgba(255, 1, 1, 0.70)" fillOpacity={0.6} />
