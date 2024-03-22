@@ -1,4 +1,3 @@
-
 import HeaderDashboard from "../../components/Dashboard/HeaderDashboard/HeaderDashboard";
 import Activity from "../../components/Dashboard/ActivityCharts/Activity";
 import Objectifs from "../../components/Dashboard/Objectifs/Objectifs";
@@ -9,8 +8,14 @@ const User = () => {
     <div>
       <HeaderDashboard />
       <Activity />
-      <Objectifs/>
-      <RadarPerformance/>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ marginRight: '15px' }}>
+          <Objectifs />
+        </div>
+        <div style={{ marginLeft: '15px' }}>
+          <RadarPerformance />
+        </div>
+      </div>
     </div>
   );
 }
