@@ -13,13 +13,18 @@ const User = () => {
         <div style={{ marginRight: '15px' }}>
           <Objectifs />
         </div>
+       
         <div style={{ marginLeft: '15px' }}>
           <RadarPerformance />
         </div>
+        <div style={{ marginRight: '150px', marginLeft: '110px' }}>
+          <KeyPerformanceIndice />
+        </div>
       </div>
-      <KeyPerformanceIndice/>
     </div>
   );
 }
 
 export default User;
+
+
