@@ -2,6 +2,7 @@ import HeaderDashboard from "../../components/Dashboard/HeaderDashboard/HeaderDa
 import Activity from "../../components/Dashboard/ActivityCharts/Activity";
 import Objectifs from "../../components/Dashboard/Objectifs/Objectifs";
 import RadarPerformance from "../../components/Dashboard/Radar/Radar";
+import KeyPerformanceIndice from "../../components/Dashboard/KPI/KPI";
 
 const User = () => {
   return (
@@ -16,6 +17,7 @@ const User = () => {
           <RadarPerformance />
         </div>
       </div>
+      <KeyPerformanceIndice/>
     </div>
   );
 }

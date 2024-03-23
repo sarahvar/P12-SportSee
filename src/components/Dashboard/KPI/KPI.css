@@ -1,0 +1,15 @@
+.score {
+    position: relative;
+    flex: 1 1 200px;
+    max-width: 258px;
+    border-radius: 5px;
+    padding-block: 13px;
+}
+  
+  .title {
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    left: 30px;
+    top: 24px;
+  }
