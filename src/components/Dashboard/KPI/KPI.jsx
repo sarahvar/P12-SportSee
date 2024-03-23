@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getData } from '../../../service/dataSwitch';
 import { USER_MAIN_DATA } from '../../../mocks/data/informations';
 import { getUserInformation } from '../../../api/call';
-import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Text } from 'recharts';
 
 const KeyPerformanceIndice = () => {
   const { userId } = useParams();
@@ -42,39 +42,39 @@ const KeyPerformanceIndice = () => {
     return <div>Aucun utilisateur trouvé</div>;
   }
 
+  const COLORS = ['#ff0000', '#fbfbfb']; // Définissez vos couleurs ici
+
   return (
-    <div className='container-keyPerformanceIndice'>
-      <div className='chart-and-score-container'>
-        <ResponsiveContainer width='50%' height={100}>
-          <PieChart>
-            <Pie
-              data={score}
-              cx='100%'
-              cy='100%'
-              innerRadius={75}
-              outerRadius={100}
-              paddingAngle={5}
-              dataKey='value'
-              labelLine={false}
-            >
-              {score.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={index === 0 ? '#ff0000' : '#fbfbfb'} />
-              ))}
-            </Pie>
-          </PieChart>
-        </ResponsiveContainer>
-        <div className='container-keyPerformanceIndice__score-container'>
-          <span className='container-keyPerformanceIndice__score-container__score'>
-            {score[0].value * 100}% <br />
-          </span>
-          <span className='container-keyPerformanceIndice__score-container__text'>de votre </span>
-          <br />
-          <span className='container-keyPerformanceIndice__score-container__text'>objectif</span>
-        </div>
+    <div className="container-keyPerformanceIndice">
+        <h3 className="container-keyPerformanceIndice__title-score">Score</h3>
+      <ResponsiveContainer width="50%" height={100}>
+  <PieChart>
+    <Pie
+      data={score}
+      cx="100%"
+      cy="100%"
+      innerRadius={75}
+      outerRadius={100}
+      paddingAngle={5}
+      dataKey="value"
+      labelLine={false}
+    >
+      {score.map((entry, index) => (
+        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+      ))}
+    </Pie>
+  </PieChart>
+</ResponsiveContainer>
+      <div className="container-keyPerformanceIndice__score-container">
+        <span className="container-keyPerformanceIndice__score-container__score">
+          {score[0].value * 100}% <br />
+        </span>
+        <span className="container-keyPerformanceIndice__score-container__text">de votre </span>
+        <br />
+        <span className="container-keyPerformanceIndice__score-container__text">objectif</span>
       </div>
     </div>
   );
 };
 
 export default KeyPerformanceIndice;
-
