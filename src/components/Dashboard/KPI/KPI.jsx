@@ -49,7 +49,7 @@ const KeyPerformanceIndice = () => {
           <PieChart>
             <Pie
               data={score}
-              cx='80%'
+              cx='100%'
               cy='100%'
               innerRadius={75}
               outerRadius={100}
