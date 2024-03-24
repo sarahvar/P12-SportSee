@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getData } from '../../../service/dataSwitch';
 import { USER_MAIN_DATA } from '../../../mocks/data/informations';
 import { getUserInformation } from '../../../api/call';
-import { PieChart, Pie, Cell, ResponsiveContainer, Text } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const KeyPerformanceIndice = () => {
   const { userId } = useParams();
@@ -42,12 +42,12 @@ const KeyPerformanceIndice = () => {
     return <div>Aucun utilisateur trouvé</div>;
   }
 
-  const COLORS = ['#ff0000', '#fbfbfb']; // Définissez vos couleurs ici
+  const COLORS = ['#ff0000', '#fbfbfb']; 
 
   return (
     <div className="container-keyPerformanceIndice">
         <h3 className="container-keyPerformanceIndice__title-score">Score</h3>
-      <ResponsiveContainer width="50%" height={100}>
+      <ResponsiveContainer width="100%" height={100}>
   <PieChart>
     <Pie
       data={score}

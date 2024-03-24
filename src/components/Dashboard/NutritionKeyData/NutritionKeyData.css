@@ -1,0 +1,30 @@
+.keyData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 258px; /* équivalent à 16rem */
+    height: 124px;
+    flex-shrink: 0;
+  }
+  
+  .keyData__icon {
+    margin: 1.9rem;
+  }
+  
+  .keyData__energie {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .keyData__number-energie {
+    color: #282D30;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .keyData__text-energie {
+    color: #74798C;  
+    font-size: 14px;
+    font-style: normal;
+  }
+  
