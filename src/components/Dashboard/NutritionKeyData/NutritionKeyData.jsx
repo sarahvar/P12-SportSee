@@ -53,7 +53,7 @@ const User = () => {
             <aside className='main__wrapper__graph-container__aside'>
                 <NutritionKeyData
                     icon={caloriesIcon}
-                    infoEnergie={`${data.keyData.calorieCount / 1000}kCal`}
+                    infoEnergie={`${(data.keyData.calorieCount / 1000).toFixed(3).replace('.', ',')}kCal`}
                     text='Calories'
                 />
                 <NutritionKeyData
