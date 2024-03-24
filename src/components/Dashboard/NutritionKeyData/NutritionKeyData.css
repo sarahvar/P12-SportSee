@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 258px; /* équivalent à 16rem */
+    width: 258px; 
     height: 124px;
     flex-shrink: 0;
   }

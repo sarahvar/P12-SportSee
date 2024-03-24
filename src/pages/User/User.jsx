@@ -8,26 +8,25 @@ import NutritionKeyData from '../../components/Dashboard/NutritionKeyData/Nutrit
 
 
 const User = () => {
-  
-
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <HeaderDashboard />
       <Activity />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between'}}>
         <div style={{ marginRight: '15px' }}>
           <Objectifs />
         </div>
         <div style={{ marginLeft: '15px' }}>
           <RadarPerformance />
         </div>
-        <div style={{ marginRight: '100px', marginLeft: '100px' }}>
+        <div style={{ marginLeft: 'auto', marginRight: '15px' }}>
           <KeyPerformanceIndice />
         </div>
-        <NutritionKeyData/>
+        <NutritionKeyData />
       </div>
     </div>
   );
 };
 
 export default User;
+
