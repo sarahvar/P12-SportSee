@@ -4,7 +4,6 @@
     align-items: center;
     width: 258px; 
     height: 124px;
-    flex-shrink: 0;
   }
   
   .keyData__icon {
@@ -27,4 +26,11 @@
     font-size: 14px;
     font-style: normal;
   }
+
+  .main__wrapper__graph-container__aside {
+    position: fixed;
+    top: 159px;
+    right: 0;
+  }
+  
   
