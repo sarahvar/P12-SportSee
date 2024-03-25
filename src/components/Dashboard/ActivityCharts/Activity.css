@@ -9,10 +9,12 @@
     color: #20253A;
     font-size: 0.94rem;
     margin-bottom: 3.8rem;
+    margin-top: 264px
 }
 
 .legend__barChart__icons {
     display: flex;
+    margin-top: 195px
 }
 
 .legend__barChart__icons__bullet > img {
