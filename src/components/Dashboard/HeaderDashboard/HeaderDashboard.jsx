@@ -22,7 +22,7 @@ const HeaderDashboard = () => {
           {user.userInfos.firstName}
         </span>
       </h1>
-      <span className="headerDashboard__felicitation">
+      <span className="headerDashboard__felicitations">
         Félicitations ! Vous avez explosé vos objectifs hier 👏
       </span>
     </header>

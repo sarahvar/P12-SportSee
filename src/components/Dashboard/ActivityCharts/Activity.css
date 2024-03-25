@@ -24,3 +24,7 @@
     padding-left: 12px; 
     font-size: 0.875rem;
 }
+.chart-container {
+    position: relative;
+    top: 75px;
+  }
