@@ -23,5 +23,5 @@
     color: #000;
     position: fixed;
     margin-top: 125px;
-    left: 295px; /* Ajout de cette ligne pour placer l'élément au bord gauche */
+    left: 295px; 
 }
