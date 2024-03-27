@@ -1,6 +1,6 @@
 #sidebar_wrapper{
    background : #020203;
-    position: fixed;
+    position: absolute;
     width: 10%;
     bottom: 0;
     left: 0;
@@ -11,7 +11,7 @@
 }
 
 .sidebar_icon{
-    position: fixed;
+    position: absolute;
     height: 64vh;
     display: flex;
     top: 30%;

@@ -1,8 +1,12 @@
 
+
 .legend__barChart {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    margin-left: 125px
+
 }
 
 .legend__barChart__title {
@@ -28,5 +32,9 @@
 }
 .chart-container {
     position: relative;
-    top: 75px;
+    top: 306px;
+    width: 65vw; 
+    margin-left: 125px;
+    
+    
   }
