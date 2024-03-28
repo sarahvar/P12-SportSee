@@ -1,16 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SideNavBar from "./components/SideNav/SideNav";
-import TopNavBar from "./components/TopNav/TopNav";
 import ErrorPage from "./pages/Error/Error";
 import HomePage from "./pages/Home/Home";
 import UnderMaintenance from "./pages/UnderMaintenance/UnderMaintenance";
 import User from "./pages/User/User";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <BrowserRouter>
-      <TopNavBar />
+    <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profil" element={<HomePage/>} />
@@ -26,7 +25,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <SideNavBar />
+      </Layout>
     </BrowserRouter>
   );
 }

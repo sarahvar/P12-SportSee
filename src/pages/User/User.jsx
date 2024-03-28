@@ -1,16 +1,17 @@
 
-import HeaderDashboard from '../../components/Dashboard/HeaderDashboard/HeaderDashboard';
+
 import Activity from '../../components/Dashboard/ActivityCharts/Activity';
 import Objectifs from '../../components/Dashboard/Objectifs/Objectifs';
 import RadarPerformance from '../../components/Dashboard/Radar/Radar';
 import KeyPerformanceIndice from '../../components/Dashboard/KPI/KPI';
 import NutritionKeyData from '../../components/Dashboard/NutritionKeyData/NutritionKeyData';
+import Layout from '../../components/Layout/Layout';
 
 
 const User = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <HeaderDashboard />
+      <Layout/>
       <Activity />
       <div style={{ display: 'flex', justifyContent: 'space-between'}}>
         <div style={{ marginRight: '15px' }}>
