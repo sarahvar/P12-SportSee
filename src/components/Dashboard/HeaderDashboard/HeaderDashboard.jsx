@@ -1,25 +1,42 @@
 import { useParams } from "react-router-dom";
-import { USER_MAIN_DATA } from "../../../mocks/data/informations"; // Assurez-vous de fournir le bon chemin
+import { USER_MAIN_DATA } from "../../../mocks/data/informations";
+import { getData } from "../../../service/dataSwitch";
+import { useState, useEffect } from "react";
+import { getUserInformation } from '../../../api/call';
 import "./HeaderDashboard.css";
+
 const HeaderDashboard = () => {
-  // Utilisez useParams pour obtenir les paramètres de l'URL, y compris userId
   const { userId } = useParams();
+  const [userData, setUserData] = useState(null);
 
-  // Utilisez userId pour récupérer les informations de l'utilisateur à partir de USER_MAIN_DATA
-  const user = USER_MAIN_DATA.find((user) => user.id == userId);
-  console.log("Données utilisateur (users) :", user);
-  // Si aucun utilisateur correspondant n'est trouvé, affichez un message d'erreur
-  if (!user) {
-    return <div>Utilisateur non trouvé</div>;
-  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dataChoice = getData();
 
-  // Affichez le prénom de l'utilisateur dans le composant HeaderDashboard
+        if (dataChoice === "mocked") {
+          const data = USER_MAIN_DATA.find((user) => user.id === parseInt(userId));
+          console.log("Données utilisateur (mocked) :", data);
+          setUserData(data);
+        } else if (dataChoice === "api") {
+          const userData = await getUserInformation(userId);
+          console.log("Données utilisateur (API) :", userData);
+          setUserData(userData);
+        }
+      } catch (error) {
+        console.log("An error occurred:", error);
+      }
+    };
+
+    fetchData();
+  }, [userId]);
+
   return (
     <header className="headerDashboard">
       <h1 className="headerDashboard__title">
         Bonjour{" "}
         <span className="headerDashboard__firstname">
-          {user.userInfos.firstName}
+          {userData ? userData.userInfos.firstName : ""}
         </span>
       </h1>
       <span className="headerDashboard__felicitations">

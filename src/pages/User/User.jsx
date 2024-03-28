@@ -4,7 +4,7 @@ import Activity from '../../components/Dashboard/ActivityCharts/Activity';
 import Objectifs from '../../components/Dashboard/Objectifs/Objectifs';
 import RadarPerformance from '../../components/Dashboard/Radar/Radar';
 import KeyPerformanceIndice from '../../components/Dashboard/KPI/KPI';
-import NutritionKeyData from '../../components/Dashboard/NutritionKeyData/NutritionKeyData';
+import UserNutrition from '../../components/Dashboard/NutritionKeyData/NutritionKeyData';
 
 
 const User = () => {
@@ -23,7 +23,7 @@ const User = () => {
         <div style={{ marginLeft: 'auto', marginRight: '15px' }}>
           <KeyPerformanceIndice />
         </div>
-        <NutritionKeyData />
+        <UserNutrition />
       </div>
     </div>
   );

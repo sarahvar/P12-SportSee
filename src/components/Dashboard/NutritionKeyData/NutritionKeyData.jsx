@@ -21,7 +21,7 @@ const NutritionKeyData = ({ icon, infoEnergie, text }) => {
     );
 };
 
-const User = () => {
+const UserNutrition = () => {
     const { userId } = useParams();
     const [data, setData] = useState(null);
 
@@ -76,4 +76,4 @@ const User = () => {
     );
 };
 
-export default User;
+export default UserNutrition;
