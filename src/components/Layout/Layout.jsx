@@ -1,14 +1,16 @@
 import React from 'react';
 import TopNavBar from '../TopNav/TopNav';
 import SideNavBar from '../SideNav/SideNav';
-const Layout =({children}) =>{
-    return(
+import './Layout.css'
+const Layout = ({ children }) => {
+    return (
         <>
-        <div>
-            <TopNavBar/>
-            <SideNavBar/>
-        </div>
-        <main>{children}</main>
+            <TopNavBar />
+            <div className='mainContent'>
+                <SideNavBar />
+                <main>{children}</main>
+            </div>
+
         </>
     )
 }

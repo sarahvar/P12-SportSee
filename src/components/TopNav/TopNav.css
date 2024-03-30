@@ -1,62 +1,63 @@
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    color: white; 
-    display: flex; /* Utilisez flexbox pour aligner les éléments horizontalement */
-    align-items: center; /* Centrez les éléments verticalement */
-    justify-content: space-between; /* Espacez les éléments sur l'axe principal */
-  }
-  
-  .navbar_logo {
-    width: 20%;
-  }
-  
-  .navbar_logo img {
-    width: 100%;
-    padding-left: 1.8rem;
-    margin-top: 1em;
-  }
-  
-  .topbar_right {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .topbar_right ul {
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-  }
-  
-  .topbar_right a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .topbar_right a:hover {
-    color: #ff0101;
-  }
-  .topbar_right ul li a.active {
-    color: #ff0101; 
-  }
-  
-  .topbar_left {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5em;
-  }
-  
-  .topbar_left img {
-    padding-left: 1em;
-  }
-  
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  /* Utilisez flexbox pour aligner les éléments horizontalement */
+  align-items: center;
+  /* Centrez les éléments verticalement */
+  justify-content: space-between;
+  /* Espacez les éléments sur l'axe principal */
+}
+
+.navbar_logo {
+  width: 20%;
+}
+
+.navbar_logo img {
+  width: 100%;
+  padding-left: 1.8rem;
+  margin-top: 1em;
+}
+
+.topbar_right {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.topbar_right ul {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.topbar_right a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.topbar_right a:hover {
+  color: #ff0101;
+}
+
+.topbar_right ul li a.active {
+  color: #ff0101;
+}
+
+.topbar_left {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.topbar_left img {
+  padding-left: 1em;
+}

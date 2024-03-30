@@ -1,10 +1,6 @@
 #sidebar_wrapper {
     background: #020203;
-    position: fixed; 
     width: 10%;
-    top: 120px; 
-    bottom: 0;
-    left: 0;
     height: 100%; 
     flex-direction: column;
     align-items: center;
@@ -12,11 +8,8 @@
 
 
 .sidebar_icon{
-    position: fixed;
     height: 64vh;
     display: flex;
-    top: 30%;
-    left: 3%;
     flex-direction: column;
     align-items: center;
     gap: 1em;
