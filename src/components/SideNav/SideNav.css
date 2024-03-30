@@ -1,9 +1,12 @@
 #sidebar_wrapper {
-    background: #020203;
-    width: 10%;
-    height: 100%; 
-    flex-direction: column;
     align-items: center;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 120px;
+    min-width: 90px;
+    position: relative;
 }
 
 
@@ -13,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    margin-top: 327px
 }
 .copyright {
     height: 57vh;
