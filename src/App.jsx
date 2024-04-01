@@ -18,9 +18,7 @@ function App() {
         <Route
           path="/user/:userId"
           element={
-            <div style={{ marginRight: "20rem" }}>
               <User />
-            </div>
           }
         />
         <Route path="*" element={<ErrorPage />} />
