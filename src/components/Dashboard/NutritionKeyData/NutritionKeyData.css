@@ -4,6 +4,7 @@
     align-items: center;
     width: 258px; 
     height: 124px;
+    margin-bottom: 85px;
   }
   
   .keyData__icon {
@@ -29,7 +30,7 @@
 
   .main__wrapper__graph-container__aside {
     position: absolute;
-    top: 325px;
+    top: 400px;
     right: 170px;
   }
   
