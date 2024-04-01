@@ -42,7 +42,7 @@ const KeyPerformanceIndice = () => {
     return <div>Aucun utilisateur trouvé</div>;
   }
 
-  const COLORS = ['#ff0000', '#fbfbfb']; 
+  const COLORS = ['#ff0000']; 
 
   return (
     <div className="container-keyPerformanceIndice">

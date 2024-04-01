@@ -5,30 +5,29 @@ import RadarPerformance from '../../components/Dashboard/Radar/Radar';
 import KeyPerformanceIndice from '../../components/Dashboard/KPI/KPI';
 import UserNutrition from '../../components/Dashboard/NutritionKeyData/NutritionKeyData';
 
-
 const User = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <HeaderDashboard />
       <Activity />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        
-        <div style={{ marginLeft: 'auto', marginRight: '15px' }}>
-          <KeyPerformanceIndice />
-        </div>
-        <UserNutrition />
-      </div>
-      <div style={{margin:'10px'}}>
-        <div style={{ marginRight: '15px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '15px' }}>
+        <div>
           <Objectifs />
         </div>
-        <div style={{ marginLeft: '15px' }}>
-            <RadarPerformance />
+        <div style={{ flex: 1, marginLeft: '350px', marginRight: '15px' }}>
+          <RadarPerformance />
+        </div>
+        <div>
+          <div style={{ paddingRight: "320px" }}>
+            <KeyPerformanceIndice />
           </div>
         </div>
+      </div>
+      <div style={{ margin: '10px' }}>
+        <UserNutrition />
+      </div>
     </div>
   );
 };
 
 export default User;
-
