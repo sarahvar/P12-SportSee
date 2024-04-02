@@ -18,7 +18,7 @@ const User = () => {
           <RadarPerformance />
         </div>
         <div>
-          <div style={{ paddingRight: "500px" }}>
+          <div style={{ paddingRight: "500px", paddingTop: "20px" }}>
             <KeyPerformanceIndice />
           </div>
         </div>
