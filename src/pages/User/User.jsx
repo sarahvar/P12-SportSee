@@ -14,11 +14,11 @@ const User = () => {
         <div>
           <Objectifs />
         </div>
-        <div style={{ flex: 1, marginLeft: '350px', marginRight: '15px' }}>
+        <div style={{ flex: 1, marginLeft: '447px', marginRight: '15px' }}>
           <RadarPerformance />
         </div>
         <div>
-          <div style={{ paddingRight: "500px", paddingTop: "20px" }}>
+          <div style={{ paddingRight: "400px", paddingTop: "17px" }}>
             <KeyPerformanceIndice />
           </div>
         </div>
