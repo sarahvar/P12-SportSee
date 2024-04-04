@@ -7,26 +7,22 @@ import UserNutrition from '../../components/Dashboard/NutritionKeyData/Nutrition
 
 const User = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <HeaderDashboard />
+    <>
+    <HeaderDashboard />
+<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+    <div style={{ display: 'flex', flexDirection: 'column',  height: '100%', width:'80%'}}>
       <Activity />
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '15px' }}>
-        <div>
           <Objectifs />
-        </div>
-        <div style={{ flex: 1, marginLeft: '447px', marginRight: '15px' }}>
           <RadarPerformance />
-        </div>
-        <div>
-          <div style={{ paddingRight: "400px", paddingTop: "17px" }}>
             <KeyPerformanceIndice />
-          </div>
-        </div>
       </div>
-      <div style={{ margin: '10px' }}>
+      </div>
+      <div style={{ width:'20%' }}>
         <UserNutrition />
       </div>
     </div>
+    </>
   );
 };
 
