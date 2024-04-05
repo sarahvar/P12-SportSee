@@ -52,7 +52,7 @@ const KeyPerformanceIndice = () => {
   return (
     <div className='container-keyPerformanceIndice'>
       <h3 className='container-keyPerformanceIndice__title-score'>Score</h3>
-      <ResponsiveContainer width='100%' height='100%'>
+      <ResponsiveContainer width='100%' height='70%'>
         <PieChart>
           <Pie
             dataKey='value'

@@ -4,7 +4,7 @@ import { Score } from "../models/score";
 import { DataDay } from "../models/dataDay";
 import { RadarData } from "../models/radarData";
 
-const apiURL = 'http://localhost:5173';
+const apiURL = 'http://localhost:5173'
 
 // USER MAIN DATA - Retrieves information from user
 export const getAllDataUser = async (userId) => {
@@ -21,6 +21,7 @@ export const getAllDataUser = async (userId) => {
     })
 }
 
+// USER MAIN DATA - retrieves information from a user
 export const getUserInformation = async (userId) => {
     return fetch(`${apiURL}/user/${userId}`)
       .then((res) => {
@@ -40,28 +41,27 @@ export const getUserInformation = async (userId) => {
       })
   };
 
-
+// USER_ACTIVITY - retrieves a user's activity day by day with kilograms and calories
 export const getUserActivity = async (userId) => {
-  try {
-    const response = await fetch(`${apiURL}/user/${userId}/activity`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const contentType = response.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("Invalid content type. Expected JSON.");
-    }
-    const data = await response.json();
-    if (!data || !data.data || !data.data.sessions) {
-      throw new Error("Invalid data format from API");
-    }
-    const session = new Session(data.data.sessions);
-    return session.format();
-  } catch (error) {
-    console.error("An error occurred while fetching user activity:", error);
-    throw error; // Re-throw the error to handle it in the calling code
-  }
-};
+    return fetch(`${apiURL}/user/${userId}/activity`)
+      .then((res) => {
+        if (!res.ok) {
+            throw new Error(`HTTP error ! Status: ${res.status}`)
+        }
+        return res.json()
+      })
+      .then((data) => {
+        // console.log(data) 
+        const session = new Session(data.data.sessions); 
+        return session.format();
+      })
+      .catch((error) => {
+        console.log('An error occurred:', error);
+        throw error
+      })
+  };
+
+// USER_AVERAGE_SESSIONS - retrieves the average sessions of a user per day
 export const getUserAverageSessions = async (userId) => {
     return fetch(`${apiURL}/user/${userId}/average-sessions`)
       .then((res) => {
@@ -81,6 +81,7 @@ export const getUserAverageSessions = async (userId) => {
       })
   };
 
+// USER_PERFORMANCE - retrieves a user's performance (energy, endurance, etc.)
 export const getUserPerformance = async (userId) => {
     return fetch(`${apiURL}/user/${userId}/performance`)
       .then((res) => {
