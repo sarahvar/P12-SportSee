@@ -12,7 +12,7 @@ const User = () => {
 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
     <div style={{ display: 'flex', flexDirection: 'column',  height: '100%', width:'80%'}}>
       <Activity />
-      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '15px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: '15px', marginTop: '35px' }}>
           <Objectifs />
           <RadarPerformance />
             <KeyPerformanceIndice />
