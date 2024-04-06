@@ -70,7 +70,7 @@ const Activity = () => {
         </div>
       </div>
       <div className="chart-container">
-      <ResponsiveContainer height={320} width="80%">
+      <ResponsiveContainer height={320}>
         <BarChart data={userData} barGap={8} barCategoryGap={1}>
           <CartesianGrid strokeDasharray="1 1" vertical={false} />
           <XAxis
