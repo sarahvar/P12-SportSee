@@ -3,7 +3,7 @@ import { Score } from "../models/score";
 import { DataDay } from "../models/dataDay";
 import { RadarData } from "../models/radarData";
 
-const apiURL = 'http://localhost:5173'
+const apiURL = import.meta.env.VITE_API_URL;
 
 // USER MAIN DATA - Retrieves information from user
 export const getAllDataUser = async (userId) => {
