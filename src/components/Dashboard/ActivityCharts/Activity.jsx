@@ -13,7 +13,7 @@ import { ToolType } from "../../Dashboard/ActivityCharts/ToolType";
 import iconWeight from "../../../assets/Activity-icons/Oval-Poids.svg";
 import iconCaloriesBrulees from "../../../assets/Activity-icons/Oval-Calories-brulees.svg";
 import { useState, useEffect } from "react";
-import { getUserActivity } from "../../../api/call";
+import { getUserActivityById} from "../../../api/call";
 import { USER_ACTIVITY } from "../../../mocks/data/activity";
 import { getData } from "../../../service/dataSwitch";
 
@@ -39,7 +39,7 @@ const Activity = () => {
             setUserData(dataSessions);
           }
         } else if (dataChoice === "api") {
-          const data = await getUserActivity(userId);
+          const data = await getUserActivityById(userId);
           console.log("Données utilisateur (API) :", data);
           setUserData(data);
         }

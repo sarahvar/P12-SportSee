@@ -32,7 +32,7 @@ export const getUserInformation = async (userId) => {
     });
 };
 
-export const getUserActivity = async (userId) => {
+export const getUserActivityById = async (userId) => {
   return fetch(`${apiURL}/user/${userId}/activity`)
     .then((res) => {
       if (!res.ok) {
