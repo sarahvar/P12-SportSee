@@ -17,6 +17,7 @@
 
 .legend__barChart__icons {
     display: flex;
+    margin-right: -21%
 }
 
 .legend__barChart__icons__bullet > img {

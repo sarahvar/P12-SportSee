@@ -1,4 +1,3 @@
-/* SERVICE APPEL API */
 import { Session } from "../models/sessions";
 import { Score } from "../models/score";
 import { DataDay } from "../models/dataDay";
