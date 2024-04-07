@@ -3,7 +3,8 @@ import { Score } from "../models/score";
 import { DataDay } from "../models/dataDay";
 import { RadarData } from "../models/radarData";
 
-const apiURL = import.meta.env.VITE_API_URL;
+
+const apiURL = 'http://localhost:3000'
 
 export const getAllDataUser = async (userId) => {
   return fetch(`${apiURL}/user/${userId}`)
@@ -32,7 +33,7 @@ export const getUserInformation = async (userId) => {
     });
 };
 
-export const getUserActivityById = async (userId) => {
+export const getUserActivity = async (userId) => {
   return fetch(`${apiURL}/user/${userId}/activity`)
     .then((res) => {
       if (!res.ok) {

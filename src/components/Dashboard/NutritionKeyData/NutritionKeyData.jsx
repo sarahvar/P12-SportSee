@@ -22,30 +22,37 @@ const NutritionKeyData = ({ icon, infoEnergie, text }) => {
 };
 
 const UserNutrition = () => {
-    const { userId } = useParams();
-    const [data, setData] = useState(null);
+    
+  const {id} = useParams()
+  // const data = USER_MAIN_DATA.find((el) => el.id == id)
+  const [data, setData] = useState(null)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const dataChoice = getData();
-            let userData = null;
-            if (dataChoice === 'mocked') {
-                userData = USER_MAIN_DATA.find((el) => el.id == userId);
-            } else if (dataChoice === 'api') {
-                try {
-                    userData = await getAllDataUser(userId);
-                } catch (error) {
-                    console.log('An error occurred:', error);
-                }
-            }
-            setData(userData);
-        };
-        fetchData();
-    }, [userId]);
+ useEffect(() => {
 
-    if (!data) {
-        return <div>Aucun utilisateur trouvé</div>;
+    // const useMockData = import.meta.env.REACT_APP_USE_MOCK_DATA === 'true';
+    const dataChoice = getData();
+    console.log('dataChoice:', dataChoice);
+
+    if(dataChoice === 'mocked') {
+      const mockData = USER_MAIN_DATA.find((el) => el.id == id);
+      console.log(mockData);
+      setData(mockData)
+      
+    } else if(dataChoice=== 'api') {
+      getAllDataUser(id)
+      .then((data) => {
+        setData(data);
+        // console.log(data)
+      })
+      .catch((error) => {
+        console.log('An error occurred:', error);
+      }); 
     }
+  }, [id]);
+
+  if(!data || data.length === 0) {
+    return <div>Aucun utilisateur trouvé</div>
+  }
 
     return (
         <div>

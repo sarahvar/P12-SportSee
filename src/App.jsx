@@ -16,7 +16,7 @@ function App() {
         <Route path="/reglages" element={<UnderMaintenance/>} />
         <Route path="/communaute" element={<UnderMaintenance/>} />
         <Route
-          path="/user/:userId"
+          path="/user/:id"
           element={
               <User />
           }

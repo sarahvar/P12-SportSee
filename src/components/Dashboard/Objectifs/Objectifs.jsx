@@ -8,7 +8,7 @@ import { getData } from '../../../service/dataSwitch'
 
 const Objectifs = () => {
 
-  const { userId  } = useParams()
+  const { id } = useParams()
   const [dataDay, setDataDay] = useState([])
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Objectifs = () => {
 
     if(dataChoice === 'mocked') {
 
-      const data = USER_AVERAGE_SESSIONS.find((el) => el.userId == userId )
+      const data = USER_AVERAGE_SESSIONS.find((el) => el.userId == id)
       console.log(data);
 
       if(data) {
@@ -47,7 +47,7 @@ const Objectifs = () => {
       }
 
     } else if (dataChoice === 'api') { 
-    getUserAverageSessions(userId )
+    getUserAverageSessions(id)
       .then((data) => {
         setDataDay(data)
       })
@@ -55,8 +55,7 @@ const Objectifs = () => {
         console.log('An error occurred', error);
       });
     }
-  }, [userId]);
-
+  }, [id]);
   return (
     <div className="container-line-graph">
       <h3 className="container-line-graph__title">Durée moyenne des sessions</h3>

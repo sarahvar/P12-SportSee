@@ -7,7 +7,7 @@ const HomePage = () => {
             <div className='user-wrapper'>
                 <h1 className='user-heading'>Choose your user</h1>
                 <NavLink to='/user/12' className='user-item'>Pierre-Mock</NavLink>
-                <NavLink to='/user/18' className='user-item'>MockTar</NavLink>
+                <NavLink to='/user/18' className='user-item'>Mocktar</NavLink>
             </div>
         </main>
     );

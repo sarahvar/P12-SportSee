@@ -13,42 +13,45 @@ import { ToolType } from "../../Dashboard/ActivityCharts/ToolType";
 import iconWeight from "../../../assets/Activity-icons/Oval-Poids.svg";
 import iconCaloriesBrulees from "../../../assets/Activity-icons/Oval-Calories-brulees.svg";
 import { useState, useEffect } from "react";
-import { getUserActivityById} from "../../../api/call";
+import { getUserActivity} from "../../../api/call";
 import { USER_ACTIVITY } from "../../../mocks/data/activity";
 import { getData } from "../../../service/dataSwitch";
 
 const Activity = () => {
-  const { userId } = useParams();
+  const { id } = useParams();
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const dataChoice = getData();
 
-        if (dataChoice === "mocked") {
-          const data = USER_ACTIVITY.find((user) => user.userId == userId);
+    // const useMockData = import.meta.env.REACT_APP_USE_MOCK_DATA === 'true';
+    const dataChoice = getData();
 
-          if (data) {
-            console.log("Données utilisateur (maquette) :", data);
-            let dataSessions = data.sessions.map((el, index) => ({
-              day: index + 1,
-              kilogram: el.kilogram,
-              calories: el.calories,
-            }));
-            setUserData(dataSessions);
-          }
-        } else if (dataChoice === "api") {
-          const data = await getUserActivityById(userId);
-          console.log("Données utilisateur (API) :", data);
-          setUserData(data);
-        }
-      } catch (error) {
-        console.log("An error occurred:", error);
+    if(dataChoice === 'mocked') {    
+      const data = USER_ACTIVITY.find((user) => user.userId == id)
+
+      if(data) {
+        let dataSessions = data.sessions.map((el, index) => ({
+          day: index + 1,
+          kilogram: el.kilogram,
+          calories: el.calories
+        }));
+        setUserData(dataSessions)
       }
-    };
-    fetchData();
-  }, [userId]);
+
+    } else if (dataChoice === 'api') { 
+    getUserActivity(id)
+      .then((data) => {
+        setUserData(data);
+      })
+      .catch((error) => {
+        console.log('An error occurred:', error);
+      }); 
+    }
+  }, [id]);
+  
+  if(!userData || userData.length === 0) {
+    return <div>Aucun utilisateur trouvé</div>
+  }
 
   return (
     <div className="legend">

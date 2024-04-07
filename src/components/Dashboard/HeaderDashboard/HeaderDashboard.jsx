@@ -1,46 +1,48 @@
-import { useParams } from "react-router-dom";
-import { USER_MAIN_DATA } from "../../../mocks/data/informations";
-import { getData } from "../../../service/dataSwitch";
-import { useState, useEffect } from "react";
-import { getUserInformation } from '../../../api/call';
 import "./HeaderDashboard.css";
+import { getData } from "../../../service/dataSwitch";
+import { getAllDataUser } from "../../../api/call";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { USER_MAIN_DATA } from "../../../mocks/data/informations";
 
 const HeaderDashboard = () => {
-  const { userId } = useParams();
-  const [userData, setUserData] = useState(null);
+  const { id } = useParams();
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const dataChoice = getData();
+      const dataChoice = getData();
+      console.log('dataChoice:', dataChoice);
 
-        if (dataChoice === "mocked") {
-          const data = USER_MAIN_DATA.find((user) => user.id === parseInt(userId));
-          console.log("Données utilisateur (mocked) :", data);
-          setUserData(data);
-        } else if (dataChoice === "api") {
-          const userData = await getUserInformation(userId);
-          console.log("Données utilisateur (API) :", userData);
-          setUserData(userData);
+      if (dataChoice === "mocked") {
+        const mockData = USER_MAIN_DATA.find((el) => el.id == id);
+        console.log(mockData);
+        setData(mockData);
+      } else if (dataChoice === "api") {
+        try {
+          const userData = await getAllDataUser(id);
+          setData(userData);
+        } catch (error) {
+          console.log("An error occurred:", error);
         }
-      } catch (error) {
-        console.log("An error occurred:", error);
       }
     };
 
     fetchData();
-  }, [userId]);
+  }, [id]);
+
+  if (!data || data.length === 0) {
+    return <div>Aucun utilisateur trouvé</div>;
+  }
 
   return (
     <header className="headerDashboard">
       <h1 className="headerDashboard__title">
         Bonjour{" "}
-        <span className="headerDashboard__firstname">
-          {userData ? userData.userInfos.firstName : ""}
-        </span>
+        <span className="headerDashboard__name">{data.userInfos.firstName}</span>
       </h1>
       <span className="headerDashboard__felicitations">
-        Félicitations ! Vous avez explosé vos objectifs hier 👏
+        Félicitation ! Vous avez explosé vos objectifs hier 👏
       </span>
     </header>
   );

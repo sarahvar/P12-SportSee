@@ -4,37 +4,50 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getData } from '../../../service/dataSwitch';
 import { USER_MAIN_DATA } from '../../../mocks/data/informations';
+import { getUserInformation } from '../../../api/call';
 
 const KeyPerformanceIndice = () => {
-  const { userId } = useParams();
+  const { id } = useParams();
   const [score, setScore] = useState([]);
 
   useEffect(() => {
+
+    // const useMockData = import.meta.env.REACT_APP_USE_MOCK_DATA === 'true';
     const dataChoice = getData();
 
-    if (dataChoice === 'mocked') {
-      const userData = USER_MAIN_DATA.find(user => user.id == userId);
-      if (!userData) {
-        return;
+    if(dataChoice === 'mocked') {
+    // Données formatées pour les données mockées
+    const selectedUser = USER_MAIN_DATA.find(user => user.id == id);
+    console.log(selectedUser)
+  
+      if (!selectedUser) {
+        return <div>Utilisateur non trouvé</div>;
       }
-
-      const { firstName, lastName } = userData.userInfos;
-      const { todayScore, score } = userData;
+    
+      const { firstName, lastName } = selectedUser.userInfos;
+      const { todayScore, score } = selectedUser;
     
       const data = [
-        { name: `${firstName} ${lastName}`, value: todayScore || score },
-        { name: 'Autres', value: 1 - (todayScore || score) } 
+        { name: `${firstName} ${lastName}`, value: todayScore || score},
+        { name: 'Autres', value: 1 - (todayScore || score) } // Calcul du score restant
       ];
-      setScore(data);
+      setScore(data)
 
-    } else if (dataChoice === 'api') {
-      // Appel de l'API pour récupérer les données réelles
+    } else if (dataChoice === 'api') { 
+    getUserInformation(id)
+    .then((data) => {
+      setScore(data)
+    })
+    .catch((error) => {
+      console.log('An error occurred:', error)
+      });
     }
-  }, [userId, ]);
-
-  if (!score || score.length === 0) {
-    return <div>Aucun utilisateur trouvé</div>;
+  }, [id, ]);
+  
+  if(!score || score.length === 0) {
+    return <div>Aucun utilisateur trouvé</div>
   }
+
 
   return (
     <div className='container-keyPerformanceIndice'>
