@@ -61,7 +61,7 @@ const KeyPerformanceIndice = () => {
             outerRadius={85}
             innerRadius={75}
             cornerRadius={10}
-            startAngle={-90} // Start drawing from the bottom
+            startAngle={90} // Start drawing from the bottom
           >
             {score.map((ele, index) => 
               index === 0 ? (<Cell key={`cell-${index}`} fill='#ff0000' />) :
