@@ -4,7 +4,7 @@ import { DataDay } from "../models/dataDay";
 import { RadarData } from "../models/radarData";
 
 
-const apiURL = 'http://localhost:3000'
+const apiURL = import.meta.env.VITE_API_URL;
 
 export const getAllDataUser = async (userId) => {
   return fetch(`${apiURL}/user/${userId}`)
