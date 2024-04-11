@@ -20,10 +20,6 @@ Exécutez la commande suivante pour installer les dépendances :
 
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/6b5bbe0c-c172-436d-81cb-38d54ed61d52)
 
-*Utilisation
-Une fois les dépendances installées et l'environnement configuré, vous pouvez démarrer l'application en exécutant la commande suivante :
-npm run dev 
-
 *sql
 
 npm start
