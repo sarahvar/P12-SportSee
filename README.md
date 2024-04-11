@@ -36,6 +36,8 @@ npm run dev
 npm start
 Pour récupérer les données de l'API 
 
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/729bb5d6-3286-4527-aba7-996fa26f189d)
+
 
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/55546722-f422-4784-984b-138c240d37bf)
 
