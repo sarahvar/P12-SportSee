@@ -3,9 +3,11 @@
 Documentation du Projet
 
 *Introduction
+
 Ce projet est une application web développée en React.js qui permet aux utilisateurs de visualiser et de gérer leurs données de santé et de fitness.
 
 *Configuration Requise
+
 Assurez-vous d'avoir les éléments suivants installés sur votre système :
 
 *Node.js (version 12 ou supérieure)
