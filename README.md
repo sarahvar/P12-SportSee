@@ -37,30 +37,6 @@ npm start
 Pour récupérer les données de l'API 
 
 
-*Structure du Projet
-Le projet est organisé comme suit :
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/55546722-f422-4784-984b-138c240d37bf)
 
-src/ : Ce répertoire contient le code source de l'application.
-
-components/ : Composants réutilisables de l'application.
-
-pages/ : Pages de l'application.
-
-api/ : Fichiers pour les appels API.
-
-service/ : Fichiers pour les services utilitaires.
-
-assets/ : Ressources statiques telles que les images et les icônes
-
-App.js : Point d'entrée de l'application React.
-
-index.js : Point d'entrée pour le rendu de l'application React.
-
-public/ : Ce répertoire contient les fichiers statiques de l'application, tels que l'HTML de base.
-
-Fichiers d'Utilité
-
-api/call.js : Contient les fonctions pour effectuer les appels API vers le serveur.
-
-service/dataSwitch.js : Fournit des fonctions pour basculer entre les données réelles et les données simulées.
 
