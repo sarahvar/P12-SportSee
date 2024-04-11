@@ -1,8 +1,7 @@
 # React + Vite
 
-Documentation du Projet
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/02681c77-bba7-4db4-9a94-3fd9540ac97d)
 
-*Introduction
 
 Ce projet est une application web développée en React.js qui permet aux utilisateurs de visualiser et de gérer leurs données de santé et de fitness.
 
