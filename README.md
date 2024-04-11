@@ -13,17 +13,12 @@ Assurez-vous d'avoir les éléments suivants installés sur votre système :
 *Node.js (version 12 ou supérieure)
 npm (gestionnaire de paquets Node.js)
 
-Installation
-Clonez ce dépôt sur votre machine locale.
-Ouvrez une console de commande et naviguez jusqu'au répertoire du projet.
-Exécutez la commande suivante pour installer les dépendances :
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/e9a7b7af-d0b6-4ef0-b7d8-995be1c8cf8e)
+
 
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/6b5bbe0c-c172-436d-81cb-38d54ed61d52)
 
-*sql
-
-npm start
-Pour récupérer les données de l'API 
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/05b549e3-fc44-4165-a3c8-c2f4d3a58e1a)
 
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/729bb5d6-3286-4527-aba7-996fa26f189d)
 
