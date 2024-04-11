@@ -15,5 +15,6 @@ npm (gestionnaire de paquets Node.js)
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/05b549e3-fc44-4165-a3c8-c2f4d3a58e1a)
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/729bb5d6-3286-4527-aba7-996fa26f189d)
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/55546722-f422-4784-984b-138c240d37bf)
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/009aba93-7a37-4f4b-82ea-a8b9cbeb9a9c)
 
 
