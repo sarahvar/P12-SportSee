@@ -22,7 +22,7 @@ Configuration de l'Environnement
 Créez un fichier .env à la racine du projet avec les paramètres suivants :
 
 
-*VITE_API_URL=http://localhost:5173
+*VITE_API_URL=http://localhost:3000
 REACT_APP_USE_MOCK_DATA=true // true=utilisation des données mockées, false=API
 Assurez-vous d'adapter l'URL de l'API en fonction de votre environnement.
 
