@@ -40,16 +40,26 @@ L'application sera accessible à l'adresse http://localhost:3000 dans votre navi
 Le projet est organisé comme suit :
 
 src/ : Ce répertoire contient le code source de l'application.
+
 components/ : Composants réutilisables de l'application.
+
 pages/ : Pages de l'application.
+
 api/ : Fichiers pour les appels API.
+
 service/ : Fichiers pour les services utilitaires.
-assets/ : Ressources statiques telles que les images et les icônes.
+
+assets/ : Ressources statiques telles que les images et les icônes
+
 App.js : Point d'entrée de l'application React.
+
 index.js : Point d'entrée pour le rendu de l'application React.
+
 public/ : Ce répertoire contient les fichiers statiques de l'application, tels que l'HTML de base.
 
 Fichiers d'Utilité
+
 api/call.js : Contient les fonctions pour effectuer les appels API vers le serveur.
+
 service/dataSwitch.js : Fournit des fonctions pour basculer entre les données réelles et les données simulées.
 
