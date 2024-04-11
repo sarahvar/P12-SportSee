@@ -1,10 +1,8 @@
 # React + Vite
 
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/02681c77-bba7-4db4-9a94-3fd9540ac97d)
-
-
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/49d930f4-1548-4696-b8a5-7ce4cc6e518e)
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/3713ad95-3056-4435-a952-2efaa285327d)
-
 
 *Configuration Requise
 
