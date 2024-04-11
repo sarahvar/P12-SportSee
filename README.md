@@ -35,7 +35,8 @@ npm run dev
 *sql
 
 npm start
-L'application sera accessible à l'adresse http://localhost:3000 dans votre navigateur web par défaut.
+Pour récupérer les données de l'API 
+
 
 *Structure du Projet
 Le projet est organisé comme suit :
