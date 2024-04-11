@@ -30,6 +30,7 @@ Assurez-vous d'adapter l'URL de l'API en fonction de votre environnement.
 
 *Utilisation
 Une fois les dépendances installées et l'environnement configuré, vous pouvez démarrer l'application en exécutant la commande suivante :
+npm run dev 
 
 *sql
 
