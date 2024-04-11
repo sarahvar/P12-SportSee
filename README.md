@@ -3,7 +3,8 @@
 ![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/02681c77-bba7-4db4-9a94-3fd9540ac97d)
 
 
-Ce projet est une application web développée en React.js qui permet aux utilisateurs de visualiser et de gérer leurs données de santé et de fitness.
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/3713ad95-3056-4435-a952-2efaa285327d)
+
 
 *Configuration Requise
 
