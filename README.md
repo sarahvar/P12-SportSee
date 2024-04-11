@@ -12,11 +12,12 @@ Assurez-vous d'avoir les éléments suivants installés sur votre système :
 
 *Node.js (version 12 ou supérieure)
 npm (gestionnaire de paquets Node.js)
+
 Installation
 Clonez ce dépôt sur votre machine locale.
 Ouvrez une console de commande et naviguez jusqu'au répertoire du projet.
 Exécutez la commande suivante pour installer les dépendances :
-Copy code
+
 npm install
 Configuration de l'Environnement
 Créez un fichier .env à la racine du projet avec les paramètres suivants :
