@@ -1,6 +1,7 @@
 # React + Vite
 
 Documentation du Projet
+
 *Introduction
 Ce projet est une application web développée en React.js qui permet aux utilisateurs de visualiser et de gérer leurs données de santé et de fitness.
 
