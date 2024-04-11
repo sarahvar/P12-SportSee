@@ -18,15 +18,7 @@ Clonez ce dépôt sur votre machine locale.
 Ouvrez une console de commande et naviguez jusqu'au répertoire du projet.
 Exécutez la commande suivante pour installer les dépendances :
 
-npm install
-Configuration de l'Environnement
-Créez un fichier .env à la racine du projet avec les paramètres suivants :
-
-
-*VITE_API_URL=http://localhost:3000
- VITE_APP_USE_MOCK_DATA=true // true=utilisation des données mockées, false=API
-
-Assurez-vous d'adapter l'URL de l'API en fonction de votre environnement.
+![image](https://github.com/sarahvar/p12-sportsee/assets/100738177/6b5bbe0c-c172-436d-81cb-38d54ed61d52)
 
 *Utilisation
 Une fois les dépendances installées et l'environnement configuré, vous pouvez démarrer l'application en exécutant la commande suivante :
