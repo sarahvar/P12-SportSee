@@ -1,6 +1,6 @@
 import "./HeaderDashboard.css";
 import { getData } from "../../../service/dataSwitch";
-import { getAllDataUser } from "../../../api/call";
+import { getUserById } from "../../../api/call";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { USER_MAIN_DATA } from "../../../mocks/data/informations";
@@ -11,16 +11,15 @@ const HeaderDashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      // const useMockData = import.meta.env.REACT_APP_USE_MOCK_DATA === 'true';
       const dataChoice = getData();
-      console.log('dataChoice:', dataChoice);
 
       if (dataChoice === "mocked") {
         const mockData = USER_MAIN_DATA.find((el) => el.id == id);
-        console.log(mockData);
         setData(mockData);
       } else if (dataChoice === "api") {
         try {
-          const userData = await getAllDataUser(id);
+          const userData = await getUserById(id);
           setData(userData);
         } catch (error) {
           console.log("An error occurred:", error);
@@ -42,7 +41,7 @@ const HeaderDashboard = () => {
         <span className="headerDashboard__name">{data.userInfos.firstName}</span>
       </h1>
       <span className="headerDashboard__felicitations">
-        Félicitation ! Vous avez explosé vos objectifs hier 👏
+        Félicitations ! Vous avez explosé vos objectifs hier 👏
       </span>
     </header>
   );

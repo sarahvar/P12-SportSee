@@ -5,7 +5,7 @@ const router = express.Router()
 
 const {
     getUserById,
-    getUserActivityById,
+    getUserActivityByIdByIdById,
     getUserAverageSession,
     getUserPerformance
 } = require('./models')
@@ -25,7 +25,7 @@ router.get('/user/:id', (req, res) => {
 
 router.get('/user/:id/activity', (req, res) => {
     const userId = idx(req, _ => _.params.id)
-    const userData = getUserActivityById(Number(userId))
+    const userData = getUserActivityByIdByIdById(Number(userId))
 
     return handleNoUserData(res, userData)
 })

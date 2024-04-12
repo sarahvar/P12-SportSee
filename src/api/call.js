@@ -6,7 +6,7 @@ import { RadarData } from "../models/radarData";
 
 const apiURL = import.meta.env.VITE_API_URL;
 
-export const getAllDataUser = async (userId) => {
+export const getUserById = async (userId) => {
   return fetch(`${apiURL}/user/${userId}`)
     .then((res) => {
       if (!res.ok) {
@@ -19,7 +19,7 @@ export const getAllDataUser = async (userId) => {
     });
 };
 
-export const getUserInformation = async (userId) => {
+export const getUserScore = async (userId) => {
   return fetch(`${apiURL}/user/${userId}`)
     .then((res) => {
       if (!res.ok) {
@@ -33,7 +33,7 @@ export const getUserInformation = async (userId) => {
     });
 };
 
-export const getUserActivity = async (userId) => {
+export const getUserActivityById = async (userId) => {
   return fetch(`${apiURL}/user/${userId}/activity`)
     .then((res) => {
       if (!res.ok) {
@@ -47,7 +47,7 @@ export const getUserActivity = async (userId) => {
     });
 };
 
-export const getUserAverageSessions = async (userId) => {
+export const getUserAverageSession = async (userId) => {
   return fetch(`${apiURL}/user/${userId}/average-sessions`)
     .then((res) => {
       if (!res.ok) {

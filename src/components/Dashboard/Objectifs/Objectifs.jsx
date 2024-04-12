@@ -2,7 +2,7 @@ import './Objectifs.css'
 import { ResponsiveContainer, LineChart, Line, XAxis, Tooltip } from 'recharts';
 import { USER_AVERAGE_SESSIONS } from '../../../mocks/data/averageSessions'
 import { useParams } from 'react-router-dom';
-import { getUserAverageSessions } from '../../../api/call';
+import { getUserAverageSession } from '../../../api/call';
 import { useState, useEffect } from 'react';
 import { getData } from '../../../service/dataSwitch'
 
@@ -47,7 +47,7 @@ const Objectifs = () => {
       }
 
     } else if (dataChoice === 'api') { 
-    getUserAverageSessions(id)
+        getUserAverageSession (id)
       .then((data) => {
         setDataDay(data)
       })

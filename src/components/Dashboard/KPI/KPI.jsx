@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getData } from '../../../service/dataSwitch';
 import { USER_MAIN_DATA } from '../../../mocks/data/informations';
-import { getUserInformation } from '../../../api/call';
+import { getUserScore } from '../../../api/call';
 
 const KeyPerformanceIndice = () => {
   const { id } = useParams();
@@ -18,7 +18,7 @@ const KeyPerformanceIndice = () => {
     if(dataChoice === 'mocked') {
     // Données formatées pour les données mockées
     const selectedUser = USER_MAIN_DATA.find(user => user.id == id);
-    console.log(selectedUser)
+  
   
       if (!selectedUser) {
         return <div>Utilisateur non trouvé</div>;
@@ -34,7 +34,7 @@ const KeyPerformanceIndice = () => {
       setScore(data)
 
     } else if (dataChoice === 'api') { 
-    getUserInformation(id)
+    getUserScore(id)
     .then((data) => {
       setScore(data)
     })

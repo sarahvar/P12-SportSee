@@ -1,6 +1,6 @@
 import './NutritionKeyData.css';
 import { getData } from '../../../service/dataSwitch';
-import { getAllDataUser } from "../../../api/call";
+import { getUserById } from "../../../api/call";
 import { USER_MAIN_DATA } from '../../../mocks/data/informations';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -27,7 +27,7 @@ const UserNutrition = () => {
   // const data = USER_MAIN_DATA.find((el) => el.id == id)
   const [data, setData] = useState(null)
 
- useEffect(() => {
+useEffect(() => {
 
     // const useMockData = import.meta.env.REACT_APP_USE_MOCK_DATA === 'true';
     const dataChoice = getData();
@@ -39,7 +39,7 @@ const UserNutrition = () => {
       setData(mockData)
       
     } else if(dataChoice=== 'api') {
-      getAllDataUser(id)
+      getUserById(id)
       .then((data) => {
         setData(data);
         // console.log(data)
@@ -56,7 +56,6 @@ const UserNutrition = () => {
 
     return (
         <div>
-            {/* Vos autres composants ici */}
             <aside className='main__wrapper__graph-container__aside'>
                 <NutritionKeyData
                     icon={caloriesIcon}
